@@ -1,6 +1,7 @@
 import './menu.css';
 import './menuMobile.css';
 import React, { useMemo, useState, useEffect } from 'react';
+import { useCookies } from "react-cookie";
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import Box from '@mui/material/Box';
@@ -9,8 +10,10 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
+import { logoutUser } from '../../Services/userServices/logout';
 
 function Menu() {
+  const [cookies, setCookie] = useCookies(['accessToken']);
   let navigate = useNavigate();
   const isMobile = useMediaQuery({ query: '(max-width: 1023px)' });
   const [showNavbar, setShowNavbar] = useState(true);
@@ -24,6 +27,10 @@ function Menu() {
     setDrawerState(!drawerState);
   };
 
+  const logout = () => {
+    logoutUser(cookies.accessToken);
+    setCookie('accessToken', '');
+  }
 
   // Drawer
   const list = () => (
@@ -39,16 +46,16 @@ function Menu() {
             onClick={() => navigate('/')}
           >
             <div className='menu-button'>
-              - Mathieu
+              - Home
             </div>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton
-            onClick={() => navigate('/resume')}
+            onClick={logout}
           >
             <div className='menu-button'>
-              - Expériences
+              - Logout
             </div>
           </ListItemButton>
         </ListItem>
