@@ -1,0 +1,50 @@
+.scoreBoard-main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: bisque;
+  color: black;
+  height: min-content;
+}
+
+.scoreBoard-singleEvent {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px 0px 10px;
+  background-color: beige;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  align-items: flex-end;
+  width: min-content;
+}
+
+.scoreBoard-individualScore {
+  display: flex;
+  align-items: center;
+}
+
+.scoreBoard-matchScore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.scoreBoard-teamName {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.scoreBoard-score {
+  font-weight: bold;
+}
+
+.scoreBoard-at {
+  margin: -2px;
+  align-self: center;
+  font-size: smaller;
+}
+
+.scoreBoard-time {
+  width: fit-content;
+}

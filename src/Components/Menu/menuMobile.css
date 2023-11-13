@@ -1,0 +1,25 @@
+@media (max-width: 1023px) {
+  .header {
+    background-color: #f6f6f6;
+    left: 0;
+    position: fixed;
+    width: 98vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 4px solid #82bf00; 
+    transition: all 0.3s ease-out;
+  }
+
+  .sticky-hidden {
+    transform: translateY(-200%);
+  }
+
+  .toggle-menu {
+    color: #004638;
+    border: 2px 0px 2px 0px #004638;
+    font-weight: 700;
+  }
+}
