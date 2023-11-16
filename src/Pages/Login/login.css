@@ -1,4 +1,4 @@
-.LoginPage {
+.login-page {
   height: 90vh;
   width:90vw;
   padding: 10vh;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.Login {
+.login-box {
   width: 90vw;
   display: flex;
   flex-direction: row;
@@ -16,22 +16,22 @@
   align-items: center;
 }
 
-.Loading {
+.login-loading {
   height: 10vh;
   margin-left: 2vw;
 }
 
-.EmailForm {
+.login-emailForm {
   display: flex;
   flex-direction: row;
 }
 
-.EmailInput {
+.login-emailInput {
   display: flex;
   flex-direction: column;
 }
 
-.Email {
+.login-email {
   background-color: #f6f6f6;
   border: 3px solid #004638;
   border-radius: 20px;
@@ -46,7 +46,7 @@ h6 {
   color: red;
 }
 
-.SubmitEmail {
+.login-submitEmail {
   margin-left: 2vw;
   background-color: #004638;
   height: 5vh;
@@ -56,6 +56,6 @@ h6 {
   border: none;
 }
 
-.SubmitEmail:hover {
+.login-submitEmail:hover {
   cursor: pointer;
 }

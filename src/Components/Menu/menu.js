@@ -55,6 +55,33 @@ function Menu() {
             onClick={logout}
           >
             <div className='menu-button'>
+              - Créer un Survival-Pool
+            </div>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={logout}
+          >
+            <div className='menu-button'>
+              - Joindre un Survival-Pool
+            </div>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={logout}
+          >
+            <div className='menu-button'>
+              - Profil
+            </div>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={logout}
+          >
+            <div className='menu-button'>
               - Logout
             </div>
           </ListItemButton>

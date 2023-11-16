@@ -1,4 +1,4 @@
-import './Spinner.css';
+import './spinner.css';
 
 /*
 Loading Page Component
@@ -6,7 +6,7 @@ Loading Page Component
 
 function Spinner() {
   return (
-      <div className='spinner'></div>
+    <div className='spinner'></div>
   );
 }
 

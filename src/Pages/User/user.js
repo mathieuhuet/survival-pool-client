@@ -32,23 +32,21 @@ const User = () => {
   }
 
   return (
-    <div className='App'>
-      <div className='UserPage'>
-        <div>
-          <h1>
-            {state.firstName}
-          </h1>
-          <h1>
-            {state.lastName}
-          </h1>
-        </div>
-        <button
-          className='DisconnectButton'
-          onClick={disconnect}
-        >
-          Se Déconnecter
-        </button>
+    <div className='user-page'>
+      <div>
+        <h1>
+          {state.firstName}
+        </h1>
+        <h1>
+          {state.lastName}
+        </h1>
       </div>
+      <button
+        className='user-disconnectButton'
+        onClick={disconnect}
+      >
+        Se Déconnecter
+      </button>
     </div>
   );
 };

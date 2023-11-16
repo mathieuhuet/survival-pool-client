@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { Formik } from 'formik';
 import EmailVerification from '../../Components/EmailVerification/emailVerification';
 import { loginEmail } from '../../Services/userServices/login';
-import Spinner from '../../Spinner';
+import Spinner from '../../Components/Spinner/spinner';
 
 
 
@@ -42,9 +42,9 @@ const Login = (props) => {
 
 
   return (
-    <div className='LoginPage'>
-      <div className='Login'>
-        <div className='Formik'>
+    <div className='login-page'>
+      <div className='login-box'>
+        <div className='login-formik'>
           <Formik
             initialValues={{ email: '' }}
             validate={values => {
@@ -71,27 +71,27 @@ const Login = (props) => {
               handleSubmit,
               isSubmitting,
             }) => (
-              <form onSubmit={handleSubmit} className='EmailForm'>
-                <div className='EmailInput'>
+              <form onSubmit={handleSubmit} className='login-emailForm'>
+                <div className='login-emailInput'>
                   <input
                     type="email"
                     name="email"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.email}
-                    className='Email'
+                    className='login-email'
                   />
                   <h6>
                     {message || ' '}
                   </h6>
                 </div>
                 {isSubmitting && 
-                  <div className='Loading'>
+                  <div className='login-loading'>
                     <Spinner/>
                   </div>
                 }
                 {!isSubmitting && 
-                  <button type="submit" disabled={isSubmitting} className='SubmitEmail'>
+                  <button type="submit" disabled={isSubmitting} className='login-submitEmail'>
                     Se Connecter
                   </button>
                 }
@@ -101,7 +101,7 @@ const Login = (props) => {
         </div>
       </div>
       {showEmailVerification &&
-        <div className='EmailVerification'>
+        <div className='login-emailVerification'>
           <EmailVerification
             email={email}
           />

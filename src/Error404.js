@@ -6,7 +6,7 @@ Error page, in normal use you should never see this page.
 
 function Error404() {
   return (
-    <div className="Error404">
+    <div className="error404">
       Error 404
       <p>
         Vous êtes sur un lien innexistant.

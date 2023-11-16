@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useCookies } from 'react-cookie';
 import { verifyUser } from '../../Services/userServices/verifyLoginCode';
-import Spinner from '../../Spinner';
+import Spinner from '../Spinner/spinner';
 
 /*
 List all the devices on screen and fetch the live data of all of them.
@@ -32,7 +32,7 @@ function EmailVerification (props) {
   }
 
   return (
-    <div className='Container'>
+    <div className='emailVerification-page'>
       <Formik
         initialValues={{ code: '' }}
         validate={values => {
@@ -55,7 +55,7 @@ function EmailVerification (props) {
           handleSubmit,
           isSubmitting,
         }) => (
-          <form onSubmit={handleSubmit} className='Form'>
+          <form onSubmit={handleSubmit} className='emailVerification-form'>
             <h3>
               Entrer le code de 4 charactère que vous avez reçu par email : 
             </h3>
@@ -66,15 +66,15 @@ function EmailVerification (props) {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.code}
-                className='Code'
+                className='emailVerification-code'
               />
               {!isSubmitting && 
-                <button type="submit" disabled={isSubmitting} className='SubmitCode'>
+                <button type="submit" disabled={isSubmitting} className='emailVerification-submitCode'>
                   Valider
                 </button>
               }
               {isSubmitting &&
-                <div className='Loading'>
+                <div className='emailVerification-loading'>
                   <Spinner/>
                 </div>
               }
