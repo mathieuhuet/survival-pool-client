@@ -1,25 +1,27 @@
-.user-page {
-  height: 100vh;
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
+@media (min-width: 1024px) {
+  .user-page {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-h1 {
-  color: #82bf00;
-}
+  h1 {
+    color: #82bf00;
+  }
 
-.user-disconnectButton {
-  background-color: #004638;
-  color: #f6f6f6;
-  border: none;
-  padding: 3vh;
-  border-radius: 10px;
-  font-size: larger;
-}
+  .user-disconnectButton {
+    background-color: #004638;
+    color: #f6f6f6;
+    border: none;
+    padding: 3vh;
+    border-radius: 10px;
+    font-size: larger;
+  }
 
-.user-disconnectButton:hover {
-  cursor: pointer;
+  .user-disconnectButton:hover {
+    cursor: pointer;
+  }
 }

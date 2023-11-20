@@ -1,17 +1,20 @@
-.spinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #d8f537 transparent #d8f537 transparent;
-  border-radius: 50%;
-  animation: spin-anim 1.2s linear infinite;
-}
+@media (min-width: 1024px) {
 
-@keyframes spin-anim {
-  0% {
-      transform: rotate(0deg);
+  .spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #d8f537 transparent #d8f537 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
   }
-  100% {
-      transform: rotate(360deg);
+
+  @keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
   }
 }

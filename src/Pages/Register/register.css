@@ -1,0 +1,115 @@
+@media (min-width: 1024px) {
+  .register-page {
+    height: 90vh;
+    width: 90vw;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .register-box {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #004638;
+    padding: 24px;
+  }
+
+  .register-toptxt {
+    color: #f6f6f6;
+    font-size: 48px;
+    font-weight: 900;
+  }
+
+  .register-bottomtxt {
+    color: #f6f6f6;
+    font-size: 16px;
+    align-self: flex-start;
+  }
+
+  .register-loading {
+    align-self: flex-end;
+  }
+
+  .register-emailForm {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .register-emailInput {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register-email {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
+
+  .register-firstName {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
+
+  .register-lastName {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
+
+  .register-username {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
+
+  h6 {
+    color: red;
+  }
+
+  .register-submitEmail {
+    margin-left: 2vw;
+    background-color: #460013;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 48px;
+    width: 128px;
+    border-radius: 10px;
+    color: #f6f6f6;
+    border: none;
+    align-self: flex-end;
+  }
+
+  .register-submitEmail:hover {
+    cursor: pointer;
+  }
+
+  .register-emailVerification {
+    position: absolute;
+    z-index: 4;
+    background-color: #f6f6f6;
+  }
+}

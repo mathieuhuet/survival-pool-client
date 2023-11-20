@@ -7,6 +7,7 @@ import { Formik } from 'formik';
 import { useCookies } from 'react-cookie';
 import { verifyUser } from '../../Services/userServices/verifyLoginCode';
 import Spinner from '../Spinner/spinner';
+import ClickableText from '../ClickableText/clickableText';
 
 /*
 List all the devices on screen and fetch the live data of all of them.
@@ -88,6 +89,11 @@ function EmailVerification (props) {
           </form>
         )}
       </Formik>
+      <ClickableText
+        onClick={props.close}
+      >
+        Fermer cette fenêtre
+      </ClickableText>
     </div>
   );
 }

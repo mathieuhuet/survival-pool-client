@@ -1,12 +1,15 @@
 import './login.css'
 import React, {useState} from 'react';
 import { Formik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import EmailVerification from '../../Components/EmailVerification/emailVerification';
 import { loginEmail } from '../../Services/userServices/login';
 import Spinner from '../../Components/Spinner/spinner';
+import ClickableText from '../../Components/ClickableText/clickableText';
 
 
 const Login = (props) => {
+  let navigate = useNavigate();
   const [showEmailVerification, setShowEmailVerification] = useState(false);
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
@@ -96,13 +99,14 @@ const Login = (props) => {
           </Formik>
         </div>
         <div className='login-bottomtxt'>
-          Pas de compte? Vous pouvez en créer un en cliquant ici.
+          Pas de compte? <ClickableText onClick={() => navigate('/register')}>Vous pouvez en créer un en cliquant ici.</ClickableText>
         </div>
       </div>
       {showEmailVerification &&
         <div className='login-emailVerification'>
           <EmailVerification
             email={email}
+            close={() => setShowEmailVerification(false)}
           />
         </div>
       }

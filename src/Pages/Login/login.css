@@ -1,83 +1,85 @@
-.login-page {
-  height: 90vh;
-  width: 90vw;
-  padding: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
+@media (min-width: 1024px) {
+  .login-page {
+    height: 90vh;
+    width: 90vw;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-.login-box {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #004638;
-  padding: 24px;
-}
+  .login-box {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #004638;
+    padding: 24px;
+  }
 
-.login-toptxt {
-  color: #f6f6f6;
-  font-size: 48px;
-  font-weight: 900;
-}
+  .login-toptxt {
+    color: #f6f6f6;
+    font-size: 48px;
+    font-weight: 900;
+  }
 
-.login-bottomtxt {
-  color: #f6f6f6;
-  font-size: 16px;
-  align-self: flex-start;
-}
+  .login-bottomtxt {
+    color: #f6f6f6;
+    font-size: 16px;
+    align-self: flex-start;
+  }
 
-.login-loading {
-  align-self: flex-end;
-}
+  .login-loading {
+    align-self: flex-end;
+  }
 
-.login-emailForm {
-  display: flex;
-  flex-direction: row;
-}
+  .login-emailForm {
+    display: flex;
+    flex-direction: row;
+  }
 
-.login-emailInput {
-  display: flex;
-  flex-direction: column;
-}
+  .login-emailInput {
+    display: flex;
+    flex-direction: column;
+  }
 
-.login-email {
-  background-color: #f6f6f6;
-  border: 3px solid #004638;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 5vh;
-  width: 20vw;
-  font-size: medium;
-}
+  .login-email {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
 
-h6 {
-  color: red;
-}
+  h6 {
+    color: red;
+  }
 
-.login-submitEmail {
-  margin-left: 2vw;
-  background-color: #460013;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  height: 48px;
-  width: 128px;
-  border-radius: 10px;
-  color: #f6f6f6;
-  border: none;
-  align-self: flex-end;
-}
+  .login-submitEmail {
+    margin-left: 2vw;
+    background-color: #460013;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 48px;
+    width: 128px;
+    border-radius: 10px;
+    color: #f6f6f6;
+    border: none;
+    align-self: flex-end;
+  }
 
-.login-submitEmail:hover {
-  cursor: pointer;
-}
+  .login-submitEmail:hover {
+    cursor: pointer;
+  }
 
-.login-emailVerification {
-  position: absolute;
-  z-index: 4;
-  background-color: #f6f6f6;
+  .login-emailVerification {
+    position: absolute;
+    z-index: 4;
+    background-color: #f6f6f6;
+  }
 }

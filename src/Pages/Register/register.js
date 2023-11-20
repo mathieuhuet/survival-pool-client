@@ -1,13 +1,16 @@
 import './register.css'
 import React, {useState} from 'react';
 import { Formik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import EmailVerification from '../../Components/EmailVerification/emailVerification';
 import { registerUser } from '../../Services/userServices/register';
 import Spinner from '../../Components/Spinner/spinner';
+import ClickableText from '../../Components/ClickableText/clickableText';
 
 
 
 const Register = (props) => {
+  let navigate = useNavigate();
   const [showEmailVerification, setShowEmailVerification] = useState(false);
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
@@ -64,6 +67,9 @@ const Register = (props) => {
             }) => (
               <form onSubmit={handleSubmit} className='register-emailForm'>
                 <div className='register-emailInput'>
+                  <div>
+                    Votre email:
+                  </div>
                   <input
                     type="email"
                     name="email"
@@ -72,25 +78,34 @@ const Register = (props) => {
                     value={values.email}
                     className='register-email'
                   />
+                  <div>
+                    Votre prénom:
+                  </div>
                   <input
                     type="email"
-                    name="email"
+                    name="firstName"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.firstName}
                     className='register-firstName'
                   />
+                  <div>
+                    Votre nom:
+                  </div>
                   <input
                     type="email"
-                    name="email"
+                    name="lastName"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.lastName}
                     className='register-lastName'
                   />
+                  <div>
+                    Votre nom d'utilisateur:
+                  </div>
                   <input
                     type="email"
-                    name="email"
+                    name="username"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.username}
@@ -107,18 +122,22 @@ const Register = (props) => {
                 }
                 {!isSubmitting && 
                   <button type="submit" disabled={isSubmitting} className='register-submitEmail'>
-                    Se Connecter
+                    Créer un compte
                   </button>
                 }
               </form>
             )}
           </Formik>
         </div>
+        <div className='register-bottomtxt'>
+          Vous avez déjà compte? <ClickableText onClick={() => navigate('/login')}>Vous pouvez vous connecter en cliquant ici.</ClickableText>
+        </div>
       </div>
       {showEmailVerification &&
         <div className='register-emailVerification'>
           <EmailVerification
             email={email}
+            close={() => setShowEmailVerification(false)}
           />
         </div>
       }
