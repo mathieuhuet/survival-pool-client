@@ -2,6 +2,7 @@ export const colors = {
   white: "#f6f6f6",
   whiteGreen: "#eef2e7",
   lightGreen: "#82bf00",
+  darkRed: '#460013',
   darkGreen: "#004638",
   neonGreen: '#d8f537',
   lightGray: "#c3c3c3",

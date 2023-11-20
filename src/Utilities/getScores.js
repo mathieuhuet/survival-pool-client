@@ -5,7 +5,7 @@ export default async function getScores () {
   let to = '';
   // NFL weeks are from thursday(4) to monday(1), so we'll fetch matches from wednesday(3) to the next tuesday(2) [sunday - saturday][0 - 6]
   if (weekday < 3) {
-    today.setDate(today.getDate() - (weekday + 3));
+    today.setDate(today.getDate() - (weekday + 5));
     from = today.toISOString().slice(0, 4) + today.toISOString().slice(5, 7) + today.toISOString().slice(8, 10);
     today.setDate(today.getDate() + 6);
     to = today.toISOString().slice(0, 4) + today.toISOString().slice(5, 7) + today.toISOString().slice(8, 10);

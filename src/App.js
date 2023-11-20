@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ScoreBoard from './Components/ScoreBoard/scoreBoard';
 import Menu from './Components/Menu/menu';
+import Bottom from './Components/Bottom/bottom';
 // Auth
 import { useCookies } from 'react-cookie';
 import { getUserInfo } from './Services/userServices/getUserInfo';
@@ -32,10 +33,11 @@ function App() {
           <Menu />
           <ScoreBoard />
         </div>
-      {cookies.accessToken ?           
-        <SignedInRoute/> :
-        <SignedOutRoute/>
-      }   
+        {cookies.accessToken ?           
+          <SignedInRoute/> :
+          <SignedOutRoute/>
+        }
+        <Bottom />
       </Router>
     </div>
   );

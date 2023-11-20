@@ -1,5 +1,7 @@
 import './emailVerification.css';
+import './emailVerificationMobile.css';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useCookies } from 'react-cookie';
@@ -12,6 +14,7 @@ List all the devices on screen and fetch the live data of all of them.
 
 
 function EmailVerification (props) {
+  const isMobile = useMediaQuery({ query: '(max-width: 1023px)' });
   const [cookies, setCookie] = useCookies(['accessToken']);
   const [message, setMessage] = useState('');
 

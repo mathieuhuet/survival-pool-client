@@ -11,9 +11,7 @@ function ScoreBoard() {
     }
     get()
   }, []);
-
-  console.log(scores, 'MATHIEUUUU');
-
+  
   return (
     <div className='scoreBoard-main'>
       {scores.events ?

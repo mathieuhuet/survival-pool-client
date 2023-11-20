@@ -1,14 +1,14 @@
 import axios from 'axios';
-import { USER_API } from '../../secret'
+import { USER_API } from '../../secret';
 const API = USER_API
 ? USER_API
 : 'http://192.168.1.5:10101/user';
 
-export const verifyUser = (data) => {
+export const registerUser = (data) => {
   return new Promise((resolve, reject) => {
     console.log(API);
     axios.post(
-      `${API}/verify`, 
+      `${API}/register`, 
       data,
       {
         headers: {
@@ -16,8 +16,8 @@ export const verifyUser = (data) => {
         }
       }
     ).then((response) => {
-      const { data } = response;
-      resolve(data);
+        const { data } = response;
+        resolve(data);
     }).catch(err => {
       try {
         if (err.response.data.error) {

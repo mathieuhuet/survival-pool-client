@@ -1,6 +1,6 @@
 @media (max-width: 1023px) {
   .header {
-    background-color: #f6f6f6;
+    background-color: #460013;
     left: 0;
     position: fixed;
     width: 98vw;
@@ -9,7 +9,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 4px solid #82bf00; 
     transition: all 0.3s ease-out;
   }
 

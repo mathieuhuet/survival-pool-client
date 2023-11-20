@@ -6,16 +6,6 @@ import { loginEmail } from '../../Services/userServices/login';
 import Spinner from '../../Components/Spinner/spinner';
 
 
-
-/*
-Login Page, where you login when you navigate to the site.
-The Registration form is also on that page.
-*/
-
-
-
-
-
 const Login = (props) => {
   const [showEmailVerification, setShowEmailVerification] = useState(false);
   const [message, setMessage] = useState('');
@@ -44,6 +34,9 @@ const Login = (props) => {
   return (
     <div className='login-page'>
       <div className='login-box'>
+        <div className='login-toptxt'>
+          Login
+        </div>
         <div className='login-formik'>
           <Formik
             initialValues={{ email: '' }}
@@ -73,6 +66,9 @@ const Login = (props) => {
             }) => (
               <form onSubmit={handleSubmit} className='login-emailForm'>
                 <div className='login-emailInput'>
+                  <div>
+                    Votre email:
+                  </div>
                   <input
                     type="email"
                     name="email"
@@ -84,20 +80,23 @@ const Login = (props) => {
                   <h6>
                     {message || ' '}
                   </h6>
+                  {isSubmitting && 
+                    <div className='login-loading'>
+                      <Spinner/>
+                    </div>
+                  }
+                  {!isSubmitting && 
+                    <button type="submit" disabled={isSubmitting} className='login-submitEmail'>
+                      Se Connecter
+                    </button>
+                  }
                 </div>
-                {isSubmitting && 
-                  <div className='login-loading'>
-                    <Spinner/>
-                  </div>
-                }
-                {!isSubmitting && 
-                  <button type="submit" disabled={isSubmitting} className='login-submitEmail'>
-                    Se Connecter
-                  </button>
-                }
               </form>
             )}
           </Formik>
+        </div>
+        <div className='login-bottomtxt'>
+          Pas de compte? Vous pouvez en créer un en cliquant ici.
         </div>
       </div>
       {showEmailVerification &&

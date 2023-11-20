@@ -1,29 +1,47 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;;
-  
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
 
+button {
+  font-family: 'Gilroy-Medium';
+  src: local('Gilroy-Medium'), url(./Assets/Fonts/Gilroy-Medium.ttf) format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  font-family: Gilroy-Medium,Helvetica,Arial,sans-serif;
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f6f6f6;
+  -webkit-font-smoothing: antialiased;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #f6f6f6; 
+}
+body::-webkit-scrollbar-thumb {
+  background: #82bf00; 
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #004638; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-a {
-  color: #d8f537;
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: local('Gilroy-Medium'), url(./Assets/Fonts/Gilroy-Medium.ttf) format('truetype');
 }

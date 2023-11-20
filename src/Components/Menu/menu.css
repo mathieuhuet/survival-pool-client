@@ -1,43 +1,14 @@
 @media (min-width: 1024px) {
   .header {
-    background-color: #f6f6f6;
+    background-color: #460013;
     left: 0;
-    height: 80px;
+    height: 120px;
+    width: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    border-bottom: 4px solid #82bf00; 
     transition: all 0.3s ease-out;
-  }
-  
-  .header-selection {
-    font-size: 24px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 30px;
-    padding-bottom: 16px;
-    border:none;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 30px;
-    margin-left: 64px;
-    color: #004638;
-  }
-  
-  .header-selection:hover {
-    border: none;
-  }
-  
-  .header-selection::after{
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 8px;
-    left: 50%;
-    bottom:0;
-    background:#82bf00;
-    transition: all ease-in-out .15s;
   }
   
   .header-selection:hover::after {
@@ -46,8 +17,18 @@
   }
 
   .toggle-menu {
-    color: #004638;
-    border: 2px 0px 2px 0px #004638;
+    color: #f6f6f6;
+    padding: 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-color: #004638;
     font-weight: 700;
+    cursor: pointer;
   }
+
+  .toggle-menu:hover {
+    opacity: 0.85;
+  }
+  
 }

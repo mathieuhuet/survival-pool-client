@@ -1,6 +1,7 @@
 import './menu.css';
 import './menuMobile.css';
 import React, { useMemo, useState, useEffect } from 'react';
+import { FiAlignJustify } from "react-icons/fi";
 import { useCookies } from "react-cookie";
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
@@ -136,7 +137,9 @@ function Menu() {
             className="toggle-menu"
             onClick={toggleDrawer()}
           >
-            Menu
+            <FiAlignJustify 
+              size={24}
+            />
           </div>
           <Drawer
             anchor={'left'}
@@ -161,7 +164,9 @@ function Menu() {
             className="toggle-menu"
             onClick={toggleDrawer()}
           >
-            Menu
+            <FiAlignJustify 
+              size={32}
+            />
           </div>
           <Drawer
             anchor={'left'}

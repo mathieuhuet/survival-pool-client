@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { USER_API } from '../../sercret';
+import { USER_API } from '../../secret';
 const API = USER_API
 ? USER_API
 : 'http://192.168.1.5:10101/user';

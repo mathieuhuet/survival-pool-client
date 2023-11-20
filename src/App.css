@@ -4,7 +4,7 @@
   background-color: #f6f6f6;
   color: whitesmoke;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
@@ -12,5 +12,5 @@
   display: flex;
   height: min-content;
   width: 100vw;
-  background-color: aqua;
+  background-color: #460013;
 }

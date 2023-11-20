@@ -1,6 +1,6 @@
 .login-page {
   height: 90vh;
-  width:90vw;
+  width: 90vw;
   padding: 10vh;
   display: flex;
   flex-direction: column;
@@ -9,16 +9,30 @@
 }
 
 .login-box {
-  width: 90vw;
+  width: 600px;
+  height: 400px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #004638;
+  padding: 24px;
+}
+
+.login-toptxt {
+  color: #f6f6f6;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.login-bottomtxt {
+  color: #f6f6f6;
+  font-size: 16px;
+  align-self: flex-start;
 }
 
 .login-loading {
-  height: 10vh;
-  margin-left: 2vw;
+  align-self: flex-end;
 }
 
 .login-emailForm {
@@ -34,7 +48,6 @@
 .login-email {
   background-color: #f6f6f6;
   border: 3px solid #004638;
-  border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
   height: 5vh;
@@ -48,14 +61,23 @@ h6 {
 
 .login-submitEmail {
   margin-left: 2vw;
-  background-color: #004638;
-  height: 5vh;
-  width: 15vh;
+  background-color: #460013;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 48px;
+  width: 128px;
   border-radius: 10px;
   color: #f6f6f6;
   border: none;
+  align-self: flex-end;
 }
 
 .login-submitEmail:hover {
   cursor: pointer;
+}
+
+.login-emailVerification {
+  position: absolute;
+  z-index: 4;
+  background-color: #f6f6f6;
 }
