@@ -15,7 +15,7 @@ const Register = (props) => {
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleLogin = async (credentials, setSubmitting) => {
+  const handleRegister = async (credentials, setSubmitting) => {
     setMessage('');
     // call backend and move to next page if successful
     try {
@@ -43,17 +43,19 @@ const Register = (props) => {
             initialValues={{ email: '', firstName: '', lastName: '', username: '' }}
             validate={values => {
               const errors = {};
-              if (!values.email || !values.firstName || !values.username) {
-                errors.email = 'Required';
-              } else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-              ) {
+              if (!values.email) {
+                errors.email = 'Requis';
+              } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
                 errors.email = 'Invalid email address';
+              } else if (!values.firstName) {
+                errors.firstName = 'Requis';
+              } else if (!values.username) {
+                errors.username = 'Requis';
               }
               return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-              handleLogin({email: values.email.toLowerCase()}, setSubmitting)
+              handleRegister({email: values.email.toLowerCase(), firstName: values.firstName, lastName: values.lastName, username: values.username}, setSubmitting)
             }}
           >
             {({
@@ -67,6 +69,20 @@ const Register = (props) => {
             }) => (
               <form onSubmit={handleSubmit} className='register-emailForm'>
                 <div className='register-emailInput'>
+                  <div>
+                    Votre nom d'utilisateur:
+                  </div>
+                  <div>
+                    (nom affiché aux autres utilisateurs)
+                  </div>
+                  <input
+                    type="text"
+                    name="username"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.username}
+                    className='register-username'
+                  />
                   <div>
                     Votre email:
                   </div>
@@ -82,7 +98,7 @@ const Register = (props) => {
                     Votre prénom:
                   </div>
                   <input
-                    type="email"
+                    type="text"
                     name="firstName"
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -90,26 +106,15 @@ const Register = (props) => {
                     className='register-firstName'
                   />
                   <div>
-                    Votre nom:
+                    Votre nom (facultatif):
                   </div>
                   <input
-                    type="email"
+                    type="text"
                     name="lastName"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.lastName}
                     className='register-lastName'
-                  />
-                  <div>
-                    Votre nom d'utilisateur:
-                  </div>
-                  <input
-                    type="email"
-                    name="username"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.username}
-                    className='register-username'
                   />
                   <h6>
                     {message || ' '}

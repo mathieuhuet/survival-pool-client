@@ -71,7 +71,7 @@ function Menu() {
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton
-            onClick={logout}
+            onClick={() => navigate('/user')}
           >
             <div className='menu-button'>
               - Profil

@@ -6,7 +6,6 @@ const API = USER_API
 
 export const registerUser = (data) => {
   return new Promise((resolve, reject) => {
-    console.log(API);
     axios.post(
       `${API}/register`, 
       data,

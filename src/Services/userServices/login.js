@@ -6,7 +6,6 @@ const API = USER_API
 
 export const loginEmail = (credentials) => {
   return new Promise((resolve, reject) => {
-    console.log(API);
     axios.post(
       `${API}/login`, 
       credentials,

@@ -6,7 +6,6 @@ const API = USER_API
 
 export const deleteAccount = (accessToken) => {
     return new Promise((resolve, reject) => {
-      console.log(API);
       axios.delete(
         `${API}/deleteAccount`, 
         {

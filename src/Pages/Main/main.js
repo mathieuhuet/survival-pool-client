@@ -12,7 +12,10 @@ function Main() {
 
   return(
     <div className='main-page'>
-      
+      Vos pools
+      <div className='main-poolbox'>
+        Aucun pool
+      </div>
     </div>
   )
 }

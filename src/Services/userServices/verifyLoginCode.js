@@ -6,7 +6,6 @@ const API = USER_API
 
 export const verifyUser = (data) => {
   return new Promise((resolve, reject) => {
-    console.log(API);
     axios.post(
       `${API}/verify`, 
       data,

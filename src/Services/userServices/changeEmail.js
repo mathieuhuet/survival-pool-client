@@ -6,7 +6,6 @@ const API = USER_API
 
 export const changeEmail = (data, accessToken) => {
     return new Promise((resolve, reject) => {
-        console.log(API);
         axios.put(
           `${API}/changeEmail`, 
           data,

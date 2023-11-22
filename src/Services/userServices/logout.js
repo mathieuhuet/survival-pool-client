@@ -7,7 +7,6 @@ const API = USER_API
 
 export const logoutUser = (accessToken) => {
   return new Promise((resolve, reject) => {
-    console.log(API);
     axios.post(
       `${API}/logout`,
       {data: 'no data'},

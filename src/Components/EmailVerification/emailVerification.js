@@ -89,11 +89,13 @@ function EmailVerification (props) {
           </form>
         )}
       </Formik>
-      <ClickableText
-        onClick={props.close}
-      >
-        Fermer cette fenêtre
-      </ClickableText>
+      <div className='emailVerification-close'>
+        <ClickableText
+          onClick={props.close}
+        >
+          Fermer cette fenêtre
+        </ClickableText>
+      </div>
     </div>
   );
 }

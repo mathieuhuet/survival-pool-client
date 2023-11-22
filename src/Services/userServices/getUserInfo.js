@@ -6,7 +6,6 @@ const API = USER_API
 
 export const getUserInfo = (accessToken) => {
   return new Promise((resolve, reject) => {
-    console.log(API);
     axios.get(
       `${API}/getUserInfo`, 
       {

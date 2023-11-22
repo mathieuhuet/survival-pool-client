@@ -43,6 +43,8 @@
   .emailVerification-submitCode {
     margin-left: 2vw;
     background-color: #004638;
+    font-size: large;
+    font-weight: 550;
     height: 5vh;
     width: 10vh;
     border-radius: 10px;
@@ -54,4 +56,8 @@
     cursor: pointer;
   }
 
+  .emailVerification-close {
+    color: #460013;
+  }
+  
 }
