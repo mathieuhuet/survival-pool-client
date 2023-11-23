@@ -6,22 +6,38 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 16px;
   }
-
-  h1 {
-    color: #82bf00;
-  }
-
+  
   .user-disconnectButton {
     background-color: #004638;
     color: #f6f6f6;
     border: none;
-    padding: 3vh;
+    padding: 8px;
     border-radius: 10px;
     font-size: larger;
+    margin-left: 32px;
+    opacity: 0.9;
   }
 
   .user-disconnectButton:hover {
     cursor: pointer;
+    opacity: 1;
+  }
+
+  .user-modifyButton {
+    background-color: #004638;
+    color: #f6f6f6;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: larger;
+    margin-left: 32px;
+    opacity: 0.9;
+  }
+
+  .user-modifyButton:hover {
+    cursor: pointer;
+    opacity: 1;
   }
 }

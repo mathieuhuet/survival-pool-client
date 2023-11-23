@@ -1,0 +1,59 @@
+@media (min-width: 1024px) {
+  .modifyName-page {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 16px;
+    color: #004638;
+  }
+
+  .modifyName-box {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #004638;
+    padding: 24px;
+  }
+
+  .modifyName-toptxt {
+    color: #f6f6f6;
+    font-size: 48px;
+    font-weight: 900;
+  }
+
+  .modifyName-bottomtxt {
+    color: #f6f6f6;
+    font-size: 16px;
+    align-self: flex-start;
+  }
+
+  .modifyName-loading {
+    align-self: flex-end;
+  }
+
+  .modifyName-firstName {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
+
+  .modifyName-lastName {
+    background-color: #f6f6f6;
+    border: 3px solid #004638;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    font-size: medium;
+  }
+}

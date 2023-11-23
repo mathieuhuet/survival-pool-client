@@ -83,7 +83,7 @@ function Menu() {
             onClick={logout}
           >
             <div className='menu-button'>
-              - Logout
+              - Se déconnecter
             </div>
           </ListItemButton>
         </ListItem>
